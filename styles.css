@@ -1,0 +1,130 @@
+:root {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1e3a8a, #0f172a 60%);
+  padding: 2rem;
+}
+
+.calculator-app {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.calculator-title {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e0f2fe;
+}
+
+.calculator {
+  background-color: #1e293b;
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.6);
+}
+
+.calculator-display {
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.08), rgba(15, 23, 42, 0.6));
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  text-align: right;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  word-break: break-all;
+}
+
+.calculator-expression {
+  font-size: 1rem;
+  color: #94a3b8;
+  min-height: 1.2rem;
+}
+
+.calculator-result {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.calculator-buttons {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.button {
+  border: none;
+  border-radius: 999px;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: #0f172a;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: inset 0 -3px 0 rgba(15, 23, 42, 0.4);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #14253c;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button-control {
+  background: #475569;
+}
+
+.button-operator {
+  background: #2563eb;
+  color: #fff;
+}
+
+.button-equals {
+  grid-column: span 2;
+  background: #f97316;
+  color: #fff;
+}
+
+.button-zero {
+  grid-column: span 2;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 1.5rem;
+  }
+
+  .calculator-buttons {
+    gap: 0.5rem;
+  }
+
+  .button {
+    padding: 0.9rem;
+    font-size: 1.1rem;
+  }
+}
